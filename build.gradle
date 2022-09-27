@@ -31,18 +31,18 @@ dependencies {
 sourceSets {
     main {
         java {
-            srcDir 'src/main/java'
+            srcDir 'api/src/main/java'
         }
         resources {
-            srcDir 'src/main/resources'
+            srcDir 'api/src/main/resources'
         }
     }
     test {
         java {
-            srcDir 'src/test/java'
+            srcDir 'api/src/test/java'
         }
         resources {
-            'src/test/resources'
+            'api/src/test/resources'
         }
     }
 }
@@ -57,12 +57,3 @@ test {
 }
 
 
-task install_node_packages(type: Exec) {
-    commandLine 'sh', './install_dependencies_node.sh'
-}
-
-task start_client(type: Exec) {
-    commandLine 'sh', './start_client.sh'
-}
-
-build.dependsOn install_node_packages

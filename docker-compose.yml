@@ -1,18 +1,18 @@
 services:
-  npm:
-    image: ghcr.io/eist22-scrumdogs-millionaires/restaurant-npm:latest
-    build:
-      context: ./
-      dockerfile: src/main/java/hello/world/demo/view/react-project/Dockerfile
-    pull_policy: always
-    container_name: npm
-    ports:
-      - "3000:3000"
+  #npm:
+   # image: ghcr.io/eist22-scrumdogs-millionaires/restaurant-npm:latest
+    #build:
+     # context: ./
+      #dockerfile: api/main/java/hello/world/demo/view/react-project/Dockerfile
+#    pull_policy: always
+#    container_name: npm
+#    ports:
+#      - "3000:3000"
   springboot:
     image: ghcr.io/eist22-scrumdogs-millionaires/restaurant-sprintboot:latest
     build:
       context: ./
-      dockerfile: src/Dockerfile
+      dockerfile: api/Dockerfile
     pull_policy: always
     container_name: sprintboot
     ports:
